@@ -1,0 +1,16 @@
+# Ignore Python virtual environment
+.venv/
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore C++ build files and artifacts
+core_application_cpp/*.o
+
+# Ignore Python cache and build files
+core_application_py/__pycache__/
+
+# Ignore log, temp, and OS-specific files
+
+# Ignore not used files directory
+
