@@ -1,0 +1,7 @@
+name,date,start_time,end_time,duration_hours,description
+time_tracker,2025-10-01,09:00:00,12:00:00,3.00,"Sprint planning and team standup"
+time_tracker,2025-10-01,13:00:00,17:30:00,4.50,"Implementing user authentication API"
+time_tracker,2025-10-02,08:30:00,11:45:00,3.25,"Code review and bug fixes"
+time_tracker,2025-10-02,14:00:00,18:00:00,4.00,"Database optimization and testing"
+time_tracker,2025-10-03,09:15:00,12:30:00,3.25,"Client meeting and requirements analysis"
+time_tracker,2025-10-03,13:45:00,17:15:00,3.50,"Frontend component development"

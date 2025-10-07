@@ -1,0 +1,46 @@
+$ sh verify_installation.sh
+=== Time Tracker Installation Verification ===
+
+🐍 Python Version:
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+📄 Main Script:
+✓ time_tracker.py found
+📄 Main Script:
+📄 Main Script:
+✓ time_tracker.py found
+📄 Main Script:
+✓ time_tracker.py found
+📄 Main Script:
+📄 Main Script:
+✓ time_tracker.py found
+📄 Main Script:
+📄 Main Script:
+✓ time_tracker.py found
+✓ time_tracker.py is executable
+
+🔔 Notification System:
+⚠ notify-send not found (install with: sudo apt-get install libnotify-bin)
+
+⚙️ C++ Build Environment:
+✓ time_tracker.cpp found
+✓ g++ compiler available
+g++.exe (x86_64-win32-seh-rev0, Built by MinGW-Builds project) 15.1.0
+
+🧪 Basic Functionality Test:
+Testing help command...
+❌ Help command failed
+Testing quick start/stop cycle...
+❌ Status command failed
+❌ Start/stop cycle failed
+
+=== Verification Complete ===
+
+If all items show ✓, your installation is ready!
+If you see ⚠ or ❌, please address the issues shown above.
+
+Quick start:
+  ./time_tracker.py start 'My first task'
+  ./time_tracker.py stop
+  ./time_tracker.py report
+(.venv)

@@ -1,0 +1,127 @@
+commands:
+python time_tracker.py --help
+usage: time_tracker.py [-h] {start,stop,status,report} ...
+
+Time Reporting Tool
+
+positional arguments:
+  {start,stop,status,report}
+                        Available commands
+    start               Start time tracking
+    stop                Stop time tracking
+    status              Check current tracking status
+    report              Generate daily report
+
+options:
+  -h, --help            show this help message and exit
+
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py start "test time tracker"
+NOTIFICATION: Time Tracker Started - Started tracking: test time tracker
+Time tracking started at 21:48:32
+Description: test time tracker
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:48:32
+Duration: 0:00:02.777594
+Description: test time tracker
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py start "test time tracker"
+NOTIFICATION: Time Tracker Started - Started tracking: test time tracker
+Time tracking started at 21:48:32
+Description: test time tracker
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:48:32
+Duration: 0:00:02.777594
+Description: test time tracker
+User: shimpi
+Description: test time tracker
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:48:32
+Duration: 0:00:15.962213
+Description: test time tracker
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py stop  
+NOTIFICATION: Time Tracker Stopped - Worked for 0:03:40.836811
+Logged to CSV file
+Time tracking stopped at 21:52:13
+Duration: 0:03:40.836811
+Hours: 0.06
+Logged to: C:\Users\shimp\.time_tracker\time_logs.csv
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is not currently running.
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py report
+
+=== Daily Report for 2025-10-05 ===
+Total Hours: 0.49
+Total Entries: 4
+
+Details:
+----------------------------------------------------------------------
+21:37:19 - 21:44:39 (0.12h): working on time tracker
+21:37:19 - 21:45:04 (0.13h): working on time tracker
+21:37:19 - 21:47:52 (0.18h): working on time tracker
+21:48:32 - 21:52:13 (0.06h): test time tracker
+----------------------------------------------------------------------
+Total: 0.49 hours
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py start "test time tracker 5 min notify"     
+NOTIFICATION: Time Tracker Started - Started tracking: test time tracker 5 min notify
+Time tracking started at 21:52:36
+Description: test time tracker 5 min notify
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:52:36
+Duration: 0:05:10.130243
+Description: test time tracker 5 min notify
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:52:36
+Duration: 0:05:26.158689
+Description: test time tracker 5 min notify
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:52:36
+Duration: 0:05:34.152909
+Description: test time tracker 5 min notify
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py status
+Time tracking is ACTIVE
+Started: 2025-10-05 21:52:36
+Duration: 0:06:03.721357
+Description: test time tracker 5 min notify
+User: shimpi
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py stop  
+NOTIFICATION: Time Tracker Stopped - Worked for 0:06:19.504099
+Logged to CSV file
+Time tracking stopped at 21:58:56
+Duration: 0:06:19.504099
+Hours: 0.11
+Logged to: C:\Users\shimp\.time_tracker\time_logs.csv
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> cat C:\Users\shimp\.time_tracker\time_logs.csv
+name,date,start_time,end_time,duration_hours,description
+shimpi,2025-10-05,21:37:19,21:44:39,0.12,working on time tracker
+shimpi,2025-10-05,21:37:19,21:45:04,0.13,working on time tracker
+shimpi,2025-10-05,21:37:19,21:45:04,0.13,working on time tracker
+shimpi,2025-10-05,21:37:19,21:47:52,0.18,working on time tracker
+shimpi,2025-10-05,21:48:32,21:52:13,0.06,test time tracker
+shimpi,2025-10-05,21:52:36,21:58:56,0.11,test time tracker 5 min notify
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app> python time_tracker.py report
+
+=== Daily Report for 2025-10-05 ===
+Total Hours: 0.60
+Total Entries: 5
+
+Details:
+----------------------------------------------------------------------
+21:37:19 - 21:44:39 (0.12h): working on time tracker
+21:37:19 - 21:45:04 (0.13h): working on time tracker
+21:37:19 - 21:47:52 (0.18h): working on time tracker
+21:48:32 - 21:52:13 (0.06h): test time tracker
+21:52:36 - 21:58:56 (0.11h): test time tracker 5 min notify
+----------------------------------------------------------------------
+Total: 0.60 hours
+(.venv) PS C:\Users\shimp\Documents\ajay\cpp\time_report_app>
